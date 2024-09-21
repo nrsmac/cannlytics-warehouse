@@ -29,6 +29,7 @@ Navigate to localhost:8080, and click on the blue dot in the bottom-right corner
 ## Future Directions
 - Transform Orchestration (Dagster)
 - Parquet storage
+- Visualization/BI Platform (Superset)
 - Automated ingestion from APIs/source data
 - Live streaming logs from test sites
 - Postgres or other data warehouse for high availability
