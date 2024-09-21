@@ -7,22 +7,22 @@ models:
     columns:
       - name: sample_id
         description: "The primary key for this table"
-        data_tests:
+        tests:
           - unique
           - not_null
       - name: producer_id
         description: "The ID of the producer who submitted the sample"
-        data_tests:
+        tests:
           - not_null
       - name: lab_id
         description: "The ID of the lab that tested the sample"
-        data_tests:
+        tests:
           - not_null
       - name: product_type
         description: "The type of product tested"
-        data_tests:
+        tests:
           - not_null
       - name: date_tested
         description: "The date the sample was tested"
-        data_tests:
+        tests:
           - not_null

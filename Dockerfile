@@ -20,4 +20,4 @@ COPY duckdb.db /app/
 ENV STREAMLIT_SERVER_ADDRESS="0.0.0.0"
 
 # Run the Streamlit app
-CMD ["streamlit", "run", "app.py"]
+CMD ["streamlit", "run", "Home.py"]

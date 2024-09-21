@@ -1,0 +1,11 @@
+
+version: 2
+
+models:
+  - name: test_reults 
+    description: "Materialized and cleaned cannabis test data from every state without other metadata"
+    columns: 
+    - name: state
+      description: "The state where the sample was tested"
+      tests:
+        - not_null

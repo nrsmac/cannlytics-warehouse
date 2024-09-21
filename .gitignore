@@ -3,3 +3,5 @@
 duckdb
 .venv
 data/raw/*
+# All pycache directories
+__pycache__
