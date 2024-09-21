@@ -24,7 +24,7 @@ make transform-data  # Use dbt to run transformations inside DuckDB.
 ```bash
 make docs
 ```
-Navigate to localhost:8080, and click on the blue dot in the bottom-right corner to see lineage
+Navigate to localhost:8080, and click on the blue dot in the bottom-right corner to see lineage.
 
 ## Future Directions
 - Transform Orchestration (Dagster)
