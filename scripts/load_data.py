@@ -22,6 +22,7 @@ def load_excel_dataset_from_folder(con, folder_path, dataset):
 
 
 def main():
+    """Load all datasets from the raw folder into a DuckDB database."""
     raw_data_path = "./data/raw"
     datasets = ["test-results"]
     con = duckdb.connect("./duckdb.db")

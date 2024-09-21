@@ -2,10 +2,24 @@
 version: 2
 
 models:
-  - name: test_reults 
-    description: "Materialized and cleaned cannabis test data from every state without other metadata"
+  - name: test_results 
+    description: "Cannabis test data from every state without other metadata"
     columns: 
     - name: state
       description: "The state where the sample was tested"
+      tests:
+        - not_null
+  - name: state_averages
+    description: "Average test results for each state"
+    columns: 
+    - name: state
+      description: "The state where the sample was tested"
+      tests:
+        - not_null
+  - name: tests
+    description: "A list of all the tests that can be performed on a cannabis sample"
+    columns: 
+    - name: test_name
+      description: "The name of the test"
       tests:
         - not_null

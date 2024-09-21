@@ -1,6 +1,7 @@
+import argparse
 import sys
 from pathlib import Path
-import argparse
+
 
 def load_toml(file_path: str) -> dict:
     """Load a TOML file and return the data as a dictionary."""
@@ -39,4 +40,4 @@ if __name__ == "__main__":
     parser.add_argument("pyproject_file", nargs="?", default="./pyproject.toml", help="Path to the pyproject.toml file (default: ./pyproject.toml)")
     
     args = parser.parse_args()
-    main(args.pyproject_file, args.group)
+    main(args.pyproject_file, args.group)    main(args.pyproject_file, args.group)

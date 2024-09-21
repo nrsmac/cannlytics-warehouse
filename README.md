@@ -16,7 +16,7 @@ A proof-of-concept minimal data warehouse for cannabis test data powered by Duck
 ```bash
 poetry install  # Install dependencies in a virtual environment (by default Poetry config)
 make download-data  # Download excel files from Cannlytics
-make load-data  # Load raw data into DuckDB (can take a while)
+make load-data  # Load raw data into DuckDB (can take a while, may use up to 5GiB of disk)
 make transform-data  # Use dbt to run transformations inside DuckDB.
 ```
 
@@ -24,10 +24,11 @@ make transform-data  # Use dbt to run transformations inside DuckDB.
 ```bash
 make docs
 ```
-
+Navigate to localhost:8080, and click on the blue dot in the bottom-right corner to see lineage
 
 ## Future Directions
-- Transform Orchestration
+- Transform Orchestration (Dagster)
+- Parquet storage
 - Automated ingestion from APIs/source data
 - Live streaming logs from test sites
 - Postgres or other data warehouse for high availability

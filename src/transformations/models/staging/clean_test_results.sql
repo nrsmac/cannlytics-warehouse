@@ -3,7 +3,6 @@
 WITH clean_table as (
     SELECT
         state,
-        -- Try to cast the value to a number, if it fails, cast it to VARCHAR
         {% for test in test_cols %}
         "{{ test }}",
         {% endfor %}

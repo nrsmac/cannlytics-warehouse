@@ -1,7 +1,8 @@
 """Export materialized views to CSV files."""
-from pathlib import Path
-import duckdb
 import os
+from pathlib import Path
+
+import duckdb
 
 # Connect to the database
 con = duckdb.connect('duckdb.db')
@@ -14,4 +15,4 @@ materialized_views = [
 ]
 
 for view in materialized_views:
-    con.sql(f"COPY {view} TO 'data/materialized/{view}.csv' (HEADER, DELIMITER ',')")
+    con.sql(f"COPY {view} TO 'data/materialized/{view}.csv' (HEADER, DELIMITER ',')")    con.sql(f"COPY {view} TO 'data/materialized/{view}.csv' (HEADER, DELIMITER ',')")

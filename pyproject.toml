@@ -21,6 +21,10 @@ duckdb = "^1.1.0"
 pandas = "^2.2.2"
 pygwalker = "^0.4.9.8"
 
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.6.7"
+
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"

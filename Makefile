@@ -3,7 +3,7 @@ download-data:
 load-data: 
 	poetry run python scripts/load_data.py
 transform-data:
-	cd src/transformations && poetry run dbt run 
+	cd src/transformations && poetry run dbt deps && poetry run dbt run 
 docs:
 	cd src/transformations && poetry run dbt docs generate && poetry run dbt docs serve 
 export-materialized-views:

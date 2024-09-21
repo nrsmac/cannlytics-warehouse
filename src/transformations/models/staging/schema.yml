@@ -1,0 +1,6 @@
+version: 2
+
+models:
+  - name: clean_test_results
+    description: >
+      This model is a cleaned version of the raw_test_results model. Work in progress.
