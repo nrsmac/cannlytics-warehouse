@@ -1,0 +1,23 @@
+{% set test_cols = dbt_utils.get_column_values(table=ref('tests'), column='test_name') %}
+
+WITH filtered AS (SELECT
+    state,
+    {% for test in test_cols %}
+    "{{ test }}" ,
+    {% endfor %}
+FROM {{ ref('test_results') }} 
+)
+SELECT
+    state,
+    {% for test in test_cols %}
+    -- Get the average for each test, checking for valid numeric values
+    AVG(CASE WHEN 
+        regexp_full_match(CAST("{{ test }}" AS VARCHAR), 
+            '^[+-]?[0-9]*\.?[0-9]+$') 
+            THEN CAST("{{ test }}" AS NUMERIC)
+        ELSE 
+            NULL 
+        END) AS "{{ test }}_avg",
+    {% endfor %}
+FROM filtered
+GROUP BY STATE

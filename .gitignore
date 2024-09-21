@@ -1,0 +1,5 @@
+*.duckdb
+*.db
+duckdb
+.venv
+data/raw/*

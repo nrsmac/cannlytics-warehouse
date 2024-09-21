@@ -1,0 +1,28 @@
+
+version: 2
+
+models:
+  - name: raw_test_results
+    description: "Raw cannabis test data from every state"
+    columns:
+      - name: sample_id
+        description: "The primary key for this table"
+        data_tests:
+          - unique
+          - not_null
+      - name: producer_id
+        description: "The ID of the producer who submitted the sample"
+        data_tests:
+          - not_null
+      - name: lab_id
+        description: "The ID of the lab that tested the sample"
+        data_tests:
+          - not_null
+      - name: product_type
+        description: "The type of product tested"
+        data_tests:
+          - not_null
+      - name: date_tested
+        description: "The date the sample was tested"
+        data_tests:
+          - not_null

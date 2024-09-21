@@ -1,0 +1,10 @@
+transformations:
+  outputs:
+    dev:
+      type: duckdb
+      path: ../../duckdb.db
+      threads: 4
+      extensions:
+        - spatial
+
+  target: dev
