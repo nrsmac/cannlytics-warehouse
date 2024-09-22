@@ -18,6 +18,7 @@ poetry install  # Install dependencies in a virtual environment (by default Poet
 make download-data  # Download excel files from Cannlytics
 make load-data  # Load raw data into DuckDB (can take a while, may use up to 5GiB of disk)
 make transform-data  # Use dbt to run transformations inside DuckDB.
+make run-dev  # Launch streamlit application
 ```
 
 ### Viewing Data Asset Lineage + Docs
